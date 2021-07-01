@@ -10,4 +10,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-ENTRYPOINT [“python3”, “script.py”]
+CMD python3 script.py /app/Images /app/Results human
