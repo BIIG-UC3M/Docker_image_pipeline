@@ -1,6 +1,7 @@
-# syntax=docker/dockerfile:1
-
-FROM fnndsc/ubuntu-python3
+FROM ubuntu:latest
+RUN apt-get -y update
+RUN apt-get install python3.7.2 -y
+RUN apt install python3-pip -y
 
 WORKDIR /app
 
@@ -9,4 +10,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-ENTRYPOINT [“python3”, “script.pyc”]
+ENTRYPOINT [“python3”, “script.py”]
