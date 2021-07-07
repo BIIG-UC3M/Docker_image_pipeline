@@ -1,7 +1,7 @@
 # Docker for image pipeline
 
-## Latest version 1.5
+## Latest version 1.0
 
 ```bash
-sudo docker run 163.117.178.17:5000/image_pipeline/call_apply:version1.5 [path_to_images] [path_to_results] [species_name]
+docker run -it -v /Users/Edu/Desktop/Docker_Test/Results:/app/Results -v /Users/Edu/Desktop/Docker_Test/Images:/app/Images image_pipeline/call_apply
 ```
