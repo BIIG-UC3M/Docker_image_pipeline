@@ -7,7 +7,6 @@ import zipfile
 import warnings
 warnings.filterwarnings("ignore")
 import dicom
-#import SimpleITK as sitk
 import glob
 from pathlib import Path
 
@@ -27,8 +26,7 @@ def createDataframe(ds, own, job_id, mol):
         except Exception as e:
             print("(0040|0280) --> Job_ID cannot be empty or 'none'")
             print()
-                #job_id = input("0040|0280) --> Job_ID cannot be empty, enter a new one: ")
-                #print("Job_ID: " + str(job_id))
+                
             exceptions.append("(0040|0280) --> Job_ID cannot be empty")
             return None    
  
@@ -37,7 +35,6 @@ def createDataframe(ds, own, job_id, mol):
                 molecule = ds.OtherPatientIDs
                 assert '' != str(molecule)
         except Exception as e:
-            #print("(0040|0280) --> Job_ID cannot be empty or 'none'")if '' == str(molecule):
             molecule = "None"
 
             
@@ -73,11 +70,9 @@ def createDataframe(ds, own, job_id, mol):
         linked_experiment_id = ""
         
         if exceptions:
-        #    print("There were " + str(len(exceptions)) + " exceptions:")
             for e in exceptions:
                 print("- " + e)
             print()
-        #else:
         return CT_DataFrame(job_id, molecule, technique, experiment_id, institute, 
                             owner, date, time, subject_id, linked_experiment_id)
     
@@ -140,7 +135,7 @@ def askMolecule():
         molecule = askMolecule()
     return molecule
 
-#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------#
 
 if len(sys.argv) != 2 :
     print("Error")
