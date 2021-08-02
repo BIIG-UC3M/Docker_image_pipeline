@@ -33,6 +33,9 @@ When uploading an experiment to DDIM, it is necessary to upload a .zip file with
 
 Furthermore, it is mandatory to create a .csv or .xls (*Excel*) file with some *metadata* about the images. 
 
+| Job_ID  | Molecule |	Technique |	Experiment_ID |	Institute |	Owner |	Date |	Time |	Subject_ID |	Linked_Experiment_ID |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+
 To ease this process, *packaging_for_DDIM.py* can be used.
 
 In order to so, in <path_to_images_folder> there must be one folder for each subject and its images inside that.
