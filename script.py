@@ -8,8 +8,8 @@ import glob
 from percentageLungTissues.percentageLungTissues import *
 
 species_dict = {"human":"human_org",
-				"mice":"mice_TL",
-				"macaque":"mix_no_TL_a_mac"}
+		"mice":"mice_TL",
+		"macaque":"mix_no_TL_a_mac"}
 
 
 def ReadImage(path : str, image_extension =".mhd"):
@@ -52,7 +52,6 @@ else:
 		for k in species_dict.keys():
 			print("  -",k)
 		sys.exit("Choose a correct one!") 
-
 
 
 images_path = glob.glob(images_folder + "/*.mhd")
