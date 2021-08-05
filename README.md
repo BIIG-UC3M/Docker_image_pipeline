@@ -38,7 +38,7 @@ Furthermore, it is mandatory to create a .csv or .xls (*Excel*) file with some *
 
 To ease this process, *packaging_for_DDIM.py* can be used.
 
-In order to so, in <path_to_images_folder> there must be one folder for each subject and its images inside that.
+In order to do so, in <path_to_images_folder> there must be one folder for each subject and its images inside that.
 
 For example:
 
